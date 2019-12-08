@@ -8,7 +8,7 @@ module.exports =
     new Date str.match(/([0-9]{4})([0-9]{2})([0-9]{2})/)[1..3]
   holidays: ->
     new Promise (resolve, reject) ->
-      get process.env.URL
+      get process.env.URL || 'https://www.1823.gov.hk/common/ical/en.json'
         .pipe es.mapSync (data) ->
           resolve _.map data.vcalendar[0].vevent, (el) ->
             dtend = module.exports.format el.dtend[0]
