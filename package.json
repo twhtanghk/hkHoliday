@@ -1,0 +1,26 @@
+{
+  "name": "hkholiday",
+  "version": "0.0.1",
+  "description": "Check hong kong public holiday",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "coffee test/index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twhtanghk/hkHoliday.git"
+  },
+  "author": "Tommy Tang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twhtanghk/hkHoliday/issues"
+  },
+  "homepage": "https://github.com/twhtanghk/hkHoliday#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "coffeescript": "^2.4.1",
+    "event-stream": "^4.0.1",
+    "lodash": "^4.17.15",
+    "needle": "^2.4.0"
+  }
+}
