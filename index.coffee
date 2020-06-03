@@ -10,6 +10,7 @@ module.exports =
     new Promise (resolve, reject) ->
       get process.env.URL || 'https://www.1823.gov.hk/common/ical/en.json'
         .pipe es.mapSync (data) ->
+          data = JSON.parse data.toString()[1..]
           resolve _.map data.vcalendar[0].vevent, (el) ->
             dtend = module.exports.format el.dtend[0]
             dtend.setHours 23
